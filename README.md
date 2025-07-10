@@ -1,4 +1,4 @@
-# PyCodeAgent 🐍🤖
+# PyCode-Agent 🐍🤖
 
 A powerful Python coding assistant powered by Google's Gemini AI that can write, test, and execute Python code with integrated memory and tool support.
 
@@ -169,12 +169,13 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [ ] Code optimization suggestions
 - [ ] Multi-language support
 - [ ] Advanced debugging tools
+- [ ] Database support for SQL servives
 
 ## 💡 Tips for Best Results
 
 1. **Be Specific**: Provide clear, detailed requirements
 2. **Test Cases**: The agent automatically runs tests - mention expected outputs
-3. **File Operations**: Specify exact file names and paths
+3. **File Operations**: Specify exact file names and paths, create a folder named for file operations
 4. **Library Usage**: Use the library checker tool to verify availability
 5. **Iterative Development**: Build complex solutions step by step
 
