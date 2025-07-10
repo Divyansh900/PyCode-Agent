@@ -132,7 +132,9 @@ Executes Python code in a sandboxed environment.
 - Error handling and reporting
 
 **Example Usage:**
+
 ❌ Wrong way
+
 ````python
 code = """
 import pandas as pd   # Imports are not allowed
@@ -142,7 +144,9 @@ print(df.head())
 # Agent will execute this code using the tool
 ```
 
+
 ✅ Specified Libraries are included Implicitly, no need to import them
+
 ```python
 # Importing is handled automatically by the agent
 code = """
