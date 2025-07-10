@@ -132,10 +132,20 @@ Executes Python code in a sandboxed environment.
 - Error handling and reporting
 
 **Example Usage:**
-```python
-# This is handled automatically by the agent
+❌ Wrong way
+````python
 code = """
-import pandas as pd
+import pandas as pd   # Imports are not allowed
+df = pd.DataFrame({'A': [1, 2, 3], 'B': [4, 5, 6]})
+print(df.head())
+"""
+# Agent will execute this code using the tool
+```
+
+✅ Specified Libraries are included Implicitly, no need to import them
+```python
+# Importing is handled automatically by the agent
+code = """
 df = pd.DataFrame({'A': [1, 2, 3], 'B': [4, 5, 6]})
 print(df.head())
 """
@@ -327,7 +337,7 @@ for prompt in prompts:
 
 - **API Calls**: Limited by Google AI API quotas
 - **Memory**: Conversation buffer has practical limits
-- **Execution Time**: Code execution has timeout limits
+- **Execution Time**: Code execution has timeout limits, so try to rephrase if you get no response in UI
 
 ## Security Considerations
 
@@ -405,12 +415,3 @@ except Exception as e:
     print(f"Error: {e}")
 ```
 
-## Version History
-
-- **v1.0.0**: Initial release with basic code generation
-- **v1.1.0**: Added memory management and file operations
-- **v1.2.0**: Enhanced error handling and library support
-
----
-
-For more examples and advanced usage, see the [examples](examples/) directory in the repository.
