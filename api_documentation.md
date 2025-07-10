@@ -135,7 +135,7 @@ Executes Python code in a sandboxed environment.
 
 ❌ Wrong way
 
-````python
+```python
 code = """
 import pandas as pd   # Imports are not allowed
 df = pd.DataFrame({'A': [1, 2, 3], 'B': [4, 5, 6]})
