@@ -141,7 +141,7 @@ import pandas as pd   # Imports are not allowed
 df = pd.DataFrame({'A': [1, 2, 3], 'B': [4, 5, 6]})
 print(df.head())
 """
-# Agent will execute this code using the tool
+# Agent will try to execute this code using the tool however it will fail to recognise "import" as a valid token
 ```
 
 
